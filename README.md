@@ -39,21 +39,25 @@ git clone -b manyuser https://github.com/shadowsocksr-backup/shadowsocksr.git
 ```
 ls
 ```
-看一眼文件夹里面有什么：![看到了我们下载完成的ssr](https://upload-images.jianshu.io/upload_images/16312001-a911362302ec3d57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+看一眼文件夹里面有什么：
+![看到了我们下载完成的ssr](https://upload-images.jianshu.io/upload_images/16312001-a911362302ec3d57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 然后键入下列命令进入文件夹：
 ```
 cd shadowsocksr
 ```
-![进入文件夹](https://upload-images.jianshu.io/upload_images/16312001-11ac0f9ea820f74a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)再次ls看下有什么：
+![进入文件夹](https://upload-images.jianshu.io/upload_images/16312001-11ac0f9ea820f74a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+再次ls看下有什么：
 ```
 ls
 ```
-![就是这些了](https://upload-images.jianshu.io/upload_images/16312001-2a80696b858bd7c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)**下面我们便来配置ShadowsocksR：**
+![就是这些了](https://upload-images.jianshu.io/upload_images/16312001-2a80696b858bd7c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+**下面我们便来配置ShadowsocksR：**
 先初始化下：
 ```
 ./initcfg.sh
 ```
 执行完之后，我们就可以开始编辑配置文件了。
+
 在这里，我将使用一个Linux下十分流行并强大的编辑工具vim来编辑。
 ```
 格式：
@@ -63,21 +67,35 @@ vim [文件名]
 ```
 vim userapiconfig.py
 ```
-回车执行后就是这样的（按照图片中提示移动光标）：![按照图片中提示移动光标](https://upload-images.jianshu.io/upload_images/16312001-ed370ffa41e66bce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)或者这样移动光标：
+回车执行后就是这样的（按照图片中提示移动光标）：
+![按照图片中提示移动光标](https://upload-images.jianshu.io/upload_images/16312001-ed370ffa41e66bce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+或者这样移动光标：
+
 直接输入，然后回车：
 ```
 :set mouse+=a
 ```
-![输入并回车](https://upload-images.jianshu.io/upload_images/16312001-0a7c9baa6d609469.gif?imageMogr2/auto-orient/strip)这样就可以使用鼠标了，如果你是用安卓的话，就可以用触摸屏来点击了。
+![输入并回车](https://upload-images.jianshu.io/upload_images/16312001-0a7c9baa6d609469.gif?imageMogr2/auto-orient/strip)
+这样就可以使用鼠标了，如果你是用安卓的话，就可以用触摸屏来点击了。
 
-不管怎么样，把光标移到下图的地方就行：![移动光标到这个地方](https://upload-images.jianshu.io/upload_images/16312001-6ddd6bed4132cd29.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)然后我们按键盘上面的那个i键（代表insert，插入），下面就会出现这样：![插入（中文），英文的话就是INSERT](https://upload-images.jianshu.io/upload_images/16312001-7b7e8369c0935076.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)像下图一样删除127.0.0.1并换成你的服务器ip，并改为API_INTERFACE = 'mudbjson'![记得把图中那个ip换成你自己服务器的那个ip](https://upload-images.jianshu.io/upload_images/16312001-c76c108e01c84aa8.gif?imageMogr2/auto-orient/strip)**完成后按键盘左上角的esc键，然后输入:wq（w：write保存，q：quit退出）回车完成输入。**![esc按键](https://upload-images.jianshu.io/upload_images/16312001-ef00d1f1c641d726.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)![保存并退出](https://upload-images.jianshu.io/upload_images/16312001-cb7da718d1a89d7e.gif?imageMogr2/auto-orient/strip)
+不管怎么样，把光标移到下图的地方就行：![移动光标到这个地方](https://upload-images.jianshu.io/upload_images/16312001-6ddd6bed4132cd29.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+然后我们按键盘上面的那个i键（代表insert，插入），下面就会出现这样：
+![插入（中文），英文的话就是INSERT](https://upload-images.jianshu.io/upload_images/16312001-7b7e8369c0935076.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+像下图一样删除127.0.0.1并换成你的服务器ip，并改为API_INTERFACE = 'mudbjson'
+![记得把图中那个ip换成你自己服务器的那个ip](https://upload-images.jianshu.io/upload_images/16312001-c76c108e01c84aa8.gif?imageMogr2/auto-orient/strip)
+**完成后按键盘左上角的esc键，然后输入:wq（w：write保存，q：quit退出）回车完成输入。**
+![esc按键](https://upload-images.jianshu.io/upload_images/16312001-ef00d1f1c641d726.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![保存并退出](https://upload-images.jianshu.io/upload_images/16312001-cb7da718d1a89d7e.gif?imageMogr2/auto-orient/strip)
 
 ### 3. 添加SSR用户
+
 输入下列命令来配置SSR用户：
 ```
 python mujson_mgr.py
 ```
-然后他就会给你看一大坨帮助：![帮助](https://upload-images.jianshu.io/upload_images/16312001-6b9c11675db40e3f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)这里翻译了下：
+然后他就会给你看一大坨帮助：
+![帮助](https://upload-images.jianshu.io/upload_images/16312001-6b9c11675db40e3f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+这里翻译了下：
 ```
 usage: python mujson_manage.py -a|-d|-e|-c|-l [OPTION]...
 
@@ -110,20 +128,32 @@ General options:  # 通用选项
 ```
 python mujson_mgr.py -a -p 7392 -u jack -k 123456 -m chacha20 -o http_simple
 ```
-仔细看过帮助的朋友应该已经知道来这句话的意思了：添加一位名叫jack的用户，并分配了7392端口给他，密码是123456，加密方式为chacha20，混淆方式为http_simple。![添加完成](https://upload-images.jianshu.io/upload_images/16312001-2d90d289f5dfaa36.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-#####补充
-这里的加密方式、协议、混淆方式有很多种，客户端上都有列举，大家可以自行查看，具体选择什么，大家可以谷歌，这里我推荐chacha20作为加密，http_simple作为混淆方式，协议默认，也就是我试例命令里打的那样。![差不多就这样吧](https://upload-images.jianshu.io/upload_images/16312001-a37205606bbc90fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+仔细看过帮助的朋友应该已经知道来这句话的意思了：添加一位名叫jack的用户，并分配了7392端口给他，密码是123456，加密方式为chacha20，混淆方式为http_simple。
+![添加完成](https://upload-images.jianshu.io/upload_images/16312001-2d90d289f5dfaa36.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+##### 补充
+这里的加密方式、协议、混淆方式有很多种，客户端上都有列举，大家可以自行查看，具体选择什么，大家可以谷歌，这里我推荐chacha20作为加密，http_simple作为混淆方式，协议默认，也就是我试例命令里打的那样。
+![差不多就这样吧](https://upload-images.jianshu.io/upload_images/16312001-a37205606bbc90fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 3. 开启服务
+
 输入下列命令开启服务：
 ```
 ./run.sh
 ```
-但是，假如你在客户端尝试连接的话会失败的，如图所示，客户端测试发现连流量都发不出去，因为我们没有在防火墙那里放行这个端口，被堵住了。![被堵住了](https://upload-images.jianshu.io/upload_images/16312001-2de40e7a85e3e64c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)所以我们得前往我们的vps设置端去更改下。![配置规则](https://upload-images.jianshu.io/upload_images/16312001-e74ab2575e3d1764.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)进去之后在右上角点击“添加安全组规则”![添加](https://upload-images.jianshu.io/upload_images/16312001-186f37c879744ba6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)按图填写：![添加安全组](https://upload-images.jianshu.io/upload_images/16312001-3be23b304d5deabc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)确定之后就好了。
+但是，假如你在客户端尝试连接的话会失败的，如图所示，客户端测试发现连流量都发不出去，因为我们没有在防火墙那里放行这个端口，被堵住了。
+![被堵住了](https://upload-images.jianshu.io/upload_images/16312001-2de40e7a85e3e64c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+所以我们得前往我们的vps设置端去更改下。
+![配置规则](https://upload-images.jianshu.io/upload_images/16312001-e74ab2575e3d1764.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+进去之后在右上角点击“添加安全组规则”
+![添加](https://upload-images.jianshu.io/upload_images/16312001-186f37c879744ba6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+按图填写：
+![添加安全组](https://upload-images.jianshu.io/upload_images/16312001-3be23b304d5deabc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+确定之后就好了。
 
 ##### 但是，请注意，使用chacha20加密方式还是用不了的：
 ![可以发了，但没回来的，还是上不了网](https://upload-images.jianshu.io/upload_images/16312001-258a73a0442c75b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 **没有进来的流量，怎么办**
+
 现在来分析一波，我们回到服务端，执行
 ```
 ./stop.sh
@@ -136,14 +166,18 @@ python mujson_mgr.py -a -p 7392 -u jack -k 123456 -m chacha20 -o http_simple
 ```
 ls
 ```
-嗯，果然多了个：![就他了](https://upload-images.jianshu.io/upload_images/16312001-b7c9b6280f962e6d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)**好，我们在手机上在尝试上下网，当然还是上不去的，但是这时候log就已经记录下来了，我们看下是什么回事把！**
+嗯，果然多了个：
+![就他了](https://upload-images.jianshu.io/upload_images/16312001-b7c9b6280f962e6d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+**好，我们在手机上在尝试上下网，当然还是上不去的，但是这时候log就已经记录下来了，我们看下是什么回事把！**
 ```
 vim ssserver.log
 ```
 #### 把光标滑到最低端：
 ![哇，全是错误，难怪不行](https://upload-images.jianshu.io/upload_images/16312001-4ff80ba6a9801ac1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
  **解决方案**
+ 
 把没有的东西装起来呗。。。
+
 先直接输入
 ```
 :q
@@ -153,7 +187,8 @@ vim ssserver.log
 yum install epel-release -y
 yum install libsodium -y
 ```
-分别执行完这两个命令后就ok了![接收开始有流量了！](https://upload-images.jianshu.io/upload_images/16312001-c7f22d53453706bb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+分别执行完这两个命令后就ok了
+![接收开始有流量了！](https://upload-images.jianshu.io/upload_images/16312001-c7f22d53453706bb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 # 至此，SSR就配置完毕了，本文已列举了配置过程中可能会遇到的问题，但如果还有别的问题，可以在评论区留言。
 
 
